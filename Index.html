@@ -1,0 +1,287 @@
+
+ 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ganesh Birla | Frontend + Python</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2e; --text:#e9eefc; --muted:#a8b3d6;
+      --line:rgba(255,255,255,.08);
+      --accent:#5b8cff; --accent2:#39d98a;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --r:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background: radial-gradient(1000px 700px at 20% 0%, rgba(91,140,255,.22), transparent 60%),
+                  radial-gradient(900px 600px at 90% 20%, rgba(57,217,138,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      position:sticky; top:0; backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.88), rgba(11,18,32,.55));
+      border-bottom:1px solid var(--line);
+      padding:14px 18px; border-radius: 14px; margin-top:10px; z-index:10;
+    }
+    .brand{display:flex; gap:10px; align-items:center}
+    .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{font-size:14px; color:var(--muted); padding:8px 10px; border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .btn{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 14px; border-radius:12px; border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+    }
+    .btn:hover{background:rgba(255,255,255,.1)}
+    .hero{
+      display:grid; grid-template-columns: 1.35fr .65fr; gap:18px;
+      margin-top:18px;
+    }
+    @media (max-width:850px){ .hero{grid-template-columns:1fr} header{position:relative}}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    h1{margin:0; font-size:40px; line-height:1.15}
+    .sub{color:var(--muted); margin:10px 0 0; font-size:15px; line-height:1.6}
+    .tagrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .tag{
+      font-size:12px; padding:8px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+    }
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .primary{
+      background: linear-gradient(135deg, rgba(91,140,255,.95), rgba(57,217,138,.85));
+      border:none;
+    }
+    .primary:hover{filter:brightness(1.05)}
+    section{margin-top:18px}
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    @media (max-width:850px){ .grid2{grid-template-columns:1fr}}
+    .list{display:grid; gap:12px; margin-top:10px}
+    .item{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 14px;
+      padding:14px;
+    }
+    .item h3{margin:0 0 6px; font-size:16px}
+    .item p{margin:0; color:var(--muted); font-size:14px; line-height:1.55}
+    .meta{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .pill{
+      font-size:12px; color:var(--muted);
+      padding:6px 10px; border-radius:999px; border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .footer{
+      margin-top:22px; color:var(--muted); text-align:center; font-size:13px;
+      padding:18px 0 0;
+    }
+    input, textarea{
+      width:100%; padding:12px 12px; border-radius:14px;
+      border:1px solid var(--line); background: rgba(255,255,255,.04);
+      color:var(--text); outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    label{font-size:13px; color:var(--muted)}
+    .formrow{display:grid; gap:10px; margin-top:10px}
+    .note{font-size:12px; color:var(--muted); margin-top:10px}
+    .small{font-size:13px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <div style="font-weight:700">Ganesh Birla</div>
+          <div class="small">Frontend + Python</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="#contact">Hire Me</a>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Hi, I’m Ganesh 👋<br/>I build responsive websites & apps.</h1>
+        <p class="sub">
+          B.Tech (CSE) graduate from Patel Group of Science and Technology, Indore (RGPV).
+          Strong in JavaScript, and learning Python for backend. Open to Frontend / Python internships.
+        </p>
+
+        <div class="tagrow">
+          <span class="tag">JavaScript (Strong)</span>
+          <span class="tag">HTML • CSS</span>
+          <span class="tag">Python (Basic)</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git • GitHub</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:ganeshbirla80@gmail.com">Email Me</a>
+          <a class="btn" href="tel:+918269418711">Call</a>
+        </div>
+        <p class="note">Tip: Is page ko Netlify/GitHub Pages par free host karke link resume me daal do.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 8px">Quick Info</h3>
+        <div class="list">
+          <div class="item">
+            <h3>Location</h3>
+            <p>Indore, Madhya Pradesh</p>
+          </div>
+          <div class="item">
+            <h3>Seeking</h3>
+            <p>Frontend / Python Internship (Remote/Onsite)</p>
+          </div>
+          <div class="item">
+            <h3>Availability</h3>
+            <p>Immediate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="grid2">
+      <div class="card">
+        <h2 style="margin:0 0 8px">About</h2>
+        <p class="sub">
+          I enjoy building clean UI and solving problems. I’m focusing on Frontend development
+          (HTML, CSS, JavaScript) and learning Python for backend. I like writing readable code
+          and improving projects step-by-step.
+        </p>
+      </div>
+      <div class="card" id="skills">
+        <h2 style="margin:0 0 8px">Skills</h2>
+        <div class="list">
+          <div class="item">
+            <h3>Programming</h3>
+            <p>C, C++, Python (Basic), JavaScript (Strong)</p>
+          </div>
+          <div class="item">
+            <h3>Web</h3>
+            <p>HTML5, CSS3, Responsive Design, DOM</p>
+          </div>
+          <div class="item">
+            <h3>Database & Tools</h3>
+            <p>SQL, Git, GitHub, VS Code, Linux/Windows, AI tools</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2 style="margin:0 0 8px">Projects</h2>
+      <p class="sub" style="margin-top:0">Abhi placeholders hain — jaise hi tum projects complete karoge, yahan links add kar dena.</p>
+
+      <div class="list">
+        <div class="item">
+          <h3>1) Portfolio Website</h3>
+          <p>Responsive personal portfolio with sections: About, Skills, Projects, Contact.</p>
+          <div class="meta">
+            <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
+            <span class="pill">Netlify/GitHub Pages</span>
+          </div>
+          <div class="meta">
+            <a class="btn" href="#" onclick="alert('Add your GitHub repo link here')">GitHub</a>
+            <a class="btn" href="#" onclick="alert('Add your Live link here')">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>2) DSA / Task Tracker (Frontend + Python)</h3>
+          <p>Tracker app with Python (Flask) backend + responsive UI. Add/edit/delete, filters, SQL storage.</p>
+          <div class="meta">
+            <span class="pill">Python</span><span class="pill">Flask</span><span class="pill">SQL</span>
+            <span class="pill">JavaScript</span>
+          </div>
+          <div class="meta">
+            <a class="btn" href="#" onclick="alert('Add your GitHub repo link here')">GitHub</a>
+            <a class="btn" href="#" onclick="alert('Add your Live link here')">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="grid2">
+      <div class="card">
+        <h2 style="margin:0 0 8px">Contact</h2>
+        <p class="sub" style="margin-top:0">
+          Internship / project ke liye connect karo. Main jaldi reply karta hoon.
+        </p>
+        <div class="list">
+          <div class="item">
+            <h3>Email</h3>
+            <p><a href="mailto:ganeshbirla80@gmail.com">ganeshbirla80@gmail.com</a></p>
+          </div>
+          <div class="item">
+            <h3>Phone</h3>
+            <p><a href="tel:+918269418711">+91 82694 18711</a></p>
+          </div>
+          <div class="item">
+            <h3>LinkedIn / GitHub</h3>
+            <p class="small">Links add karna (neeche Step 2 me bata raha hoon).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="margin:0 0 8px">Message Me</h2>
+        <form onsubmit="event.preventDefault(); alert('Form submitted! (Add backend later)');">
+          <div class="formrow">
+            <div>
+              <label>Your Name</label>
+              <input required placeholder="Enter your name" />
+            </div>
+            <div>
+              <label>Your Email</label>
+              <input type="email" required placeholder="Enter your email" />
+            </div>
+            <div>
+              <label>Message</label>
+              <textarea required placeholder="Write your message"></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send</button>
+          </div>
+          <p class="note">Later, is form ko Netlify Forms ya Google Forms se connect kar denge.</p>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Ganesh Birla • Built with HTML/CSS/JS
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
